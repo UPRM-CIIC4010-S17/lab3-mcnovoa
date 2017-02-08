@@ -1,6 +1,7 @@
 import javax.swing.JFrame;
 
-public class Lab3Exercises {
+public class Lab3Exercises 
+{
 	public static void main(String[] args) {
 		JFrame myFrame = new JFrame("Maria");
 		myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
