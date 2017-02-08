@@ -24,12 +24,13 @@ public class MyPanelClass  extends JPanel
 	                        int width = x2 - x1;
 	                        int height = y2 - y1;
 	                        
-	                        //Paint the background
-	                        g.setColor(Color.DARK_GRAY);
-	                        g.fillRect(x1, y1, width + 1, height + 1);
-	                        //Draw a border
-	                        g.setColor(Color.blue);
-	                        g.drawRect(x1, y1, width, height);
+	                        Insets myInsets3 = this.getInsets();
+	                        int x4 = myInsets3.right;
+	                        int y4 = myInsets3.top;
+	                        int x5 = getWidth() - myInsets3.left - 1;
+	                        int y5 = getHeight() - myInsets3.bottom - 1;
+	                        int width3 = x5 - x4;
+	                        int height3 = y5 - y4;
 	                        
 	                        Insets myInsets2 = this.getInsets();
 	                        int x21 = myInsets.left+10;
@@ -38,12 +39,27 @@ public class MyPanelClass  extends JPanel
 	                        int y3 = getHeight() - myInsets.bottom - 10;
 	                        int width2 = x3 - x21;
 	                        int height2 = y3 - y21;
-	 
+	                        
+	                        
+	                        //Paint the background
+	                        g.setColor(Color.DARK_GRAY);
+	                        g.fillRect(x1, y1, width + 1, height + 1);
+	                        //Draw a border
+	                        g.setColor(Color.blue);
+	                        g.drawRect(x1, y1, width, height);
+	                        
+	                       
 	                    
 	                        
 							//Draw border #2
 	                        g.setColor(Color.RED);
 	                        g.drawRect(x21, y21, width2, height2);
+	                        
+	                        g.setColor(Color.WHITE);
+	                        g.drawLine(x1, y1, x2, y2);
+	                        
+	                        g.setColor(Color.magenta);
+	                        g.drawLine(x4, y4, x5, y5);
 	            }
 	}
 
