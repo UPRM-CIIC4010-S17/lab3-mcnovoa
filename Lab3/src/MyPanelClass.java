@@ -3,6 +3,7 @@ import java.awt.Graphics;
 import java.awt.Insets;
 import javax.swing.JPanel;
 import java.awt.Polygon;
+import java.awt.Rectangle;
 import java.awt.Polygon;
 
 public class MyPanelClass  extends JPanel
@@ -38,8 +39,9 @@ public class MyPanelClass  extends JPanel
 	                        
 	                        
 	                        //Paint the background
-	                        g.setColor(Color.DARK_GRAY);
+	                        g.setColor(Color.WHITE);
 	                        g.fillRect(x1, y1, width + 1, height + 1);
+	                        
 	                        //Draw a border
 	                        // g.setColor(Color.blue);
 	                        //g.drawRect(x1, y1, width, height);
@@ -68,7 +70,28 @@ public class MyPanelClass  extends JPanel
 	                        //p.addPoint(x1 + 15, y1 + 45);
 	                        //p.addPoint(x1 + 15, y1 + 25);
 	                        //g.setColor(Color.YELLOW);
-	                        //g.fillPolygon(p);
+	                        //g.drawPolygon(p);
+	                        
+	                    
+	                        Rectangle myRectangle1 = new Rectangle(x1+10,y1+10,200,140);
+	                        g.setColor(Color.RED);
+	                        g.fillRect(x1+10,y1+10,210,28);
+	                        
+	                        Rectangle myRectangle2 = new Rectangle(x1+10,y1+66,200,140);
+	                        g.setColor(Color.RED);
+	                        g.fillRect(x1+10,y1+66,210,28);
+	                        
+	                        Rectangle myRectangle3 = new Rectangle(x1+10,y1+122,200,140);
+	                        g.setColor(Color.RED);
+	                        g.fillRect(x1+10,y1+122,210,28);
+	                        
+	                        Polygon p = new Polygon();
+	                        p.addPoint(x1 + 10, y1 + 10);
+	                        p.addPoint(x1 + 120, y1 + 80);
+	                        p.addPoint(x1 + 10, y1 + 150);
+	                        g.setColor(Color.BLUE);
+	                        g.fillPolygon(p);
+	                        
 	                        
 	                        Polygon p2 = new Polygon();
 	                        p2.addPoint(x1 + 25, y1 + 73);
@@ -82,7 +105,11 @@ public class MyPanelClass  extends JPanel
 	                        p2.addPoint(x1 + 34, y1 + 98);
 	                        p2.addPoint(x1 + 38, y1 + 83);
 	                        g.setColor(Color.WHITE);
-	                        g.drawPolygon(p2);
+	                        g.fillPolygon(p2);
+	                        
+	                        Rectangle myBigRectangle = new Rectangle(x1+10,y1+10,x1+210,y1+150);
+	                        g.setColor(Color.black);
+	                        g.drawRect(x1+10,y1+10,x1+210,y1+140);
 	            }
 	}
 
